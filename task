@@ -1,0 +1,10 @@
+Hi everyone! As you have to do some kind of "Studienleistung" for the lab (as far as I can tell), I have devised a little assignment for you. If you are following the course content closely, then it should neither be a surprise nor too much of a challenge. 😉
+Your task is the following:
+
+1. Train two different BabyLMs. The "difference" is up to you -- train them on different kinds of data, different amounts of data, smaller vs. larger models, you name it. They can be extremely small, only trained on 2MB of text, there are no lower boundaries to what you should do (so it should work even with very low resources). You can use the Llama from scratch script I've uploaded.
+
+2. Evaluate these two BabyLMs on a minimal pair dataset of your choice -- possible datasets are also in the Moodle course. Your comparison should contain at least 1000 sentences (you do not have to evaluate on all of BLiMP, of course). Make sure that the dataset is appropriate for the language you are modeling.
+
+3. Write a quick report on what you did and how it affected the performance (1 page, Word or Latex, you decide).
+
+4. Hand in the report (PDF!) and your models (e.g. via GitHub, HuggingFace).
