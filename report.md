@@ -2,7 +2,7 @@
 
 For this project, I investigated how does style of language used for training effect the ability of a model to learn specific grammatical paradigm. I trained two small BabyLMs on texts from different domains and evaluated them on the same grammatical paradigm to compare their performance.
 
-Both models, training data, test dataset, scraping script and the code for both training and evaluating models are on github: https://github.com/jitka1997/Lab-NN-project
+Both models, training data, test dataset, scraping script and the code for both training and evaluating models are on github: https://github.com/jitka1997/Lab-NN-project (its a link)
 
 The github repo has a small README to know where to find everything (folders for models for example).
 
@@ -29,16 +29,10 @@ I selected these texts because they represent fundamentally different writing st
 
 ## Evaluation
 
-I tested both models on the minimal pair set called "animate subject trans" from the BLiMP datasets [A. Warstadt et al., 2020]. It consists of 1000 minimal pairs. This paradigm evaluates how well models understand that only animate agents can perform certain actions. Examples below show a pretty good explanation.
+I tested both models on the minimal pair set called "animate subject trans" from the BLiMP datasets [A. Warstadt et al., 2020]. It consists of 1000 minimal pairs. This paradigm evaluates how well models understand that only animate agents can perform certain actions. Example below show a pretty good explanation.
 
-**Examples:**
-
-- ✅ (Good) "Tina revealed Margaret." (people can reveal)
-- ❌ (Bad) "The horse revealed Margaret." (animals cant reveal someone)
 - ✅ (Good) "Danielle visited Irene" (people can visit)
 - ❌ (Bad) "The eye visited Irene" (body parts cant visit)
-
-These are the first two pairs from BLiMP minimal pair dataset for this paradigm.
 
 ### Used measurements
 
@@ -48,20 +42,18 @@ I also calculated the differences of surprisal scores between good and bad sente
 
 ## Model Configuration
 
-I trained the models using the notebook from lecture. Both models used the LLama architecture with identical hyperparameters:
+I trained the models using the notebook from lecture with these hyperparameters:
 
 - Hidden size: 128
 - Number of hidden layers: 6
-- Intermediate size: 512ß
+- Intermediate size: 512
 - Attention heads: 8
 
 I trained both models for 5 epochs. After 5 epochs the validation loss started to grow again, so I suspect the model was only getting more overfitted after this.
 
-## Hypothesis
+## Hypothesis and results
 
 I chose this paradigm because I expected it could show different performance on the models. My hypotheses was that the fiction-trained model (fiction model) would outperform the formal-trained model (formal model) because narrative texts contain a lot of examples of characters performing actions specifically in a form [subject] [verb] [object]. On the other hand formal or academic text usually use pasive form, in which [subject] is/was [verb]ed by [agent].
-
-## Results
 
 The results contradicted my hypothesis:
 
